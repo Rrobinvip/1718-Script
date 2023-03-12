@@ -31,3 +31,17 @@ process.wait()
 
 # the parent process will resume here once the child process has finished
 print(" - Process 2 has finished.")
+
+
+# get the path to your Python script relative to the current working directory
+script_path = os.path.join("macOS_scripts", "word.py")
+
+print(" - Process 3 starting.. (Typing in Word)")
+# execute the script as a child process
+process = subprocess.Popen(["python", script_path])
+
+# wait for the child process to finish
+process.wait()
+
+# the parent process will resume here once the child process has finished
+print(" - Process 3 has finished.")

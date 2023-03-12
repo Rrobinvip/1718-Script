@@ -2,9 +2,9 @@
 
 The goal of this script is to automate daily use cases. We plan to do the following:
 
-* Browse 12 webpages (1 minute each)
-* Watch a YouTube Video (12 minutes)
-* Auto typing in Word (12 minutes)
+* Browse 12 webpages (1 minute each) - Finished (macOS)
+* Watch a YouTube Video (12 minutes) - Finished (macOS)
+* Auto typing in Word (12 minutes) - Finished (macOS)
 * Zoom meeting (12 minutes)
 * WeChat (12 minutes)
 
