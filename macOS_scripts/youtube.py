@@ -31,6 +31,6 @@ driver.find_element(By.XPATH, value='(//div[@class="ytp-menuitem"])[1]').click()
 # Play the video for 12 minutes.
 time.sleep(710)
 
-print(" - (P2) Play finished! Quaiting..")
+print(" - (P2) Play finished! Quiting..")
 # Close the browser
 driver.quit()

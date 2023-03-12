@@ -9,7 +9,7 @@ num_repetitions = 12
 url = Config.WEB_PAGE
 
 # set the duration of the scrolling in seconds
-scroll_duration = 5
+scroll_duration = 60
 
 # create a new instance of the Chrome driver
 driver = webdriver.Chrome()
