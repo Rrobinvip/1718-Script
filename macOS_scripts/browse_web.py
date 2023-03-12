@@ -11,7 +11,7 @@ url = Config.WEB_PAGE
 # set the duration of the scrolling in seconds
 scroll_duration = 5
 
-# create a new instance of the Firefox driver
+# create a new instance of the Chrome driver
 driver = webdriver.Chrome()
 chrome_options = webdriver.ChromeOptions() 
     
@@ -30,7 +30,7 @@ for i in range(num_repetitions):
 
     # wait for the page to load
     time.sleep(5)
-
+    
     # scroll the page for the specified duration
     end_time = time.time() + scroll_duration
     while time.time() < end_time:
