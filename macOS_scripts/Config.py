@@ -13,3 +13,4 @@ class Config:
         "https://stackoverflow.com",
         "https://github.com/explore"
     ]
+    YOUTUBE_VID = "https://www.youtube.com/watch?v=aCdq0U6DQ8Q"
