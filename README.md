@@ -12,12 +12,10 @@ And we need to implement tools to watch frequency and power consumption.
 
 ## To use
 
-Set up config in `Config.py`, such as webpages, etc.
-
-
-1. Create the python3 venv with `python3 -m venv env`, and activate with `source env/bin/activate`.
-2. Run pip install venv_requirements.txt.
-3. Inspect packages with pip list.
+1. Set up config in `Config.py`, such as webpages, etc. There are some special cases, such as zoom btn location. It needs to be hardcoded. Pyautogui takes forever to search based on image matching, and accuracy is very low. 
+2. Create the python3 venv with `python3 -m venv env`, and activate with `source env/bin/activate`.
+3. Run pip install venv_requirements.txt.
+4. Inspect packages with pip list.
 
 ### macOS
 
