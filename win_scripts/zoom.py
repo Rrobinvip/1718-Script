@@ -70,8 +70,8 @@ time.sleep(10)
 
 
 print(" - (P4) Looking for Password Section..")
+print(" * (P4) Mannualy Click the input box!! ")
 time.sleep(10)
-pyautogui.click(x = Config.ZOOM_INFO['Password'][0], y = Config.ZOOM_INFO['Password'][1], clicks=5, interval=1)
 pyautogui.typewrite(passcode, interval=0.1)
 time.sleep(2)
 
