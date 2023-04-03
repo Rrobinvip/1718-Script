@@ -118,6 +118,6 @@ else:
 print(" - (P4) Meeting is live.")
 time.sleep(695)
 
-pyautogui.hotkey('command', 'q', interval=0.1)
+pyautogui.hotkey('alt', 'f4', interval=0.1)
 time.sleep(1)
 pyautogui.hotkey('enter')
