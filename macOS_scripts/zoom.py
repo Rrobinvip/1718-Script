@@ -69,8 +69,9 @@ time.sleep(10)
 
 
 print(" - (P4) Looking for Password Section..")
-time.sleep(1)
-pyautogui.click(x = Config.ZOOM_INFO['Password'][0], y = Config.ZOOM_INFO['Password'][1], clicks=5, interval=1)
+for i in range(5):
+    time.sleep(1)
+    pyautogui.click(x = Config.ZOOM_INFO['Password'][0], y = Config.ZOOM_INFO['Password'][1], clicks=5, interval=1)
 pyautogui.typewrite(passcode, interval=0.1)
 time.sleep(2)
 
@@ -83,3 +84,7 @@ pyautogui.click(Config.ZOOM_INFO['FinalJoin'][0], Config.ZOOM_INFO['FinalJoin'][
 
 print(" - (P4) Meeting is live.")
 time.sleep(695)
+
+pyautogui.hotkey('command', 'q', interval=0.1)
+time.sleep(1)
+pyautogui.hotkey('enter')
