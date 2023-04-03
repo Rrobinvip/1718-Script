@@ -19,7 +19,7 @@ time.sleep(5)
 
 print(" - (P5) Starting conversation.")
 pyautogui.hotkey('command', "f", interval=0.1)
-pyautogui.typewrite('2768037112', interval=0.1)
+pyautogui.typewrite(Config.QQ_INFO['QQ'], interval=0.1)
 pyautogui.press('enter')
 time.sleep(1)
 

@@ -31,11 +31,10 @@ for i in range(num_repetitions):
     # wait for the page to load
     time.sleep(5)
     
-    # scroll the page for the specified duration
-    end_time = time.time() + scroll_duration
-    while time.time() < end_time:
+    for j in range(10):
         driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-        time.sleep(1)
+        driver.refresh()
+        time.sleep(6)
 
 print(" - (P1) All pages browsed! Quiting..")    
 driver.quit()
