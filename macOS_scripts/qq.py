@@ -23,12 +23,12 @@ pyautogui.typewrite('2768037112', interval=0.1)
 pyautogui.press('enter')
 time.sleep(1)
 
-for j in range(6):
-    for i in range(60):
-        pyautogui.click(Config.QQ_INFO['Chatbox'][0], Config.QQ_INFO['Chatbox'][1])
-        pyautogui.typewrite(chat_questions[i], interval=0.1)
-        pyautogui.press('enter')
-        time.sleep(10)
+
+for i in range(60):
+    pyautogui.click(Config.QQ_INFO['Chatbox'][0], Config.QQ_INFO['Chatbox'][1])
+    pyautogui.typewrite(chat_questions[i], interval=0.1)
+    pyautogui.press('enter')
+    time.sleep(12)
     
 pyautogui.hotkey('command', 'q', interval=0.1)
     
