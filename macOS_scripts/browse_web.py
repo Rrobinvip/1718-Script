@@ -12,11 +12,17 @@ url = Config.WEB_PAGE
 scroll_duration = 60
 
 # create a new instance of the Chrome driver
-driver = webdriver.Chrome()
-chrome_options = webdriver.ChromeOptions() 
+options = webdriver.ChromeOptions() 
+options.add_argument("user-data-dir={}".format(Config.CHROME_DEFAULT_PATH))
+# Keeps the browser open
+options.add_experimental_option("detach", True)
+driver = webdriver.Chrome(options=options)
+
+# driver = webdriver.Chrome()
+# chrome_options = webdriver.ChromeOptions() 
     
 # Keeps the browser open
-chrome_options.add_experimental_option("detach", True)
+# options.add_experimental_option("detach", True)
 
 print(" - (P1) Launching the browser..")
 
