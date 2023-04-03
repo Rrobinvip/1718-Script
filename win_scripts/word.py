@@ -19,15 +19,15 @@ for i in range(60):
         pyautogui.typewrite('Hello, World 12345678', interval=0.5)
         pyautogui.press("enter")
         
-    pyautogui.hotkey("command", "a")
+    pyautogui.hotkey("command", "a", interval=0.1)
 
     for i in range(5):
-        pyautogui.hotkey("command", "b")
+        pyautogui.hotkey("command", "b", interval=0.1)
         time.sleep(1)
         
-    pyautogui.hotkey("command", "a")
+    pyautogui.hotkey("command", "a", interval=0.1)
     pyautogui.press("delete")
-    pyautogui.hotkey("command", "s")
-    pyautogui.hotkey("command", "q")
+    pyautogui.hotkey("command", "s", interval=0.1)
+    pyautogui.hotkey("command", "q", interval=0.1)
 
 print(" - (P3) Typing finished! Quiting..")
