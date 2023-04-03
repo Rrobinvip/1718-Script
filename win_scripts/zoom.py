@@ -5,7 +5,35 @@ import time
 from Config import Config
 from selenium.common.exceptions import NoSuchElementException, ElementClickInterceptedException
 from pyautogui import ImageNotFoundException
-import os
+import os, sys
+
+
+def get_yes_no_input(prompt):
+    """
+    Asks the user for a Yes/No input, ignoring cases, until a valid input is received.
+
+    Parameters:
+    prompt (str): The message displayed to the user asking for input.
+
+    Returns:
+    bool: True if the user inputs 'y' or 'yes' (case-insensitive), False if the user inputs 'n' or 'no' (case-insensitive).
+
+    Example:
+    user_wants_to_continue = get_yes_no_input("Do you want to continue? ")
+    if user_wants_to_continue:
+        print("Continuing...")
+    else:
+        print("Stopping...")
+    """
+    while True:
+        user_input = input(prompt).strip().lower()
+        if user_input in ["y", "yes"]:
+            return True
+        elif user_input in ["n", "no"]:
+            return False
+        else:
+            print("Invalid input. Please enter 'y' or 'yes' to indicate Yes, or 'n' or 'no' to indicate No.")
+            
 
 assets_file_path ={
     "ChromeCheckBox":os.path.relpath("assets/zoom/ChromeCheckBox.png"),
@@ -71,16 +99,21 @@ time.sleep(10)
 
 print(" - (P4) Looking for Password Section..")
 print(" * (P4) Mannualy Click the input box!! ")
-time.sleep(10)
-pyautogui.typewrite(passcode, interval=0.1)
-time.sleep(2)
+# time.sleep(10)
+# pyautogui.typewrite(passcode, interval=0.1)
+# time.sleep(2)
 
-print(" - (P4) Looking for join button..")
-pyautogui.click(Config.ZOOM_INFO['Join'][0], Config.ZOOM_INFO['Join'][1])
+# print(" - (P4) Looking for join button..")
+# pyautogui.click(Config.ZOOM_INFO['Join'][0], Config.ZOOM_INFO['Join'][1])
 
-time.sleep(2)
+# time.sleep(2)
 
-pyautogui.click(Config.ZOOM_INFO['FinalJoin'][0], Config.ZOOM_INFO['FinalJoin'][1])
+# pyautogui.click(Config.ZOOM_INFO['FinalJoin'][0], Config.ZOOM_INFO['FinalJoin'][1])
+
+if get_yes_no_input("Are you in the meeting?"):
+    pass
+else:
+    sys.exit(1)
 
 print(" - (P4) Meeting is live.")
 time.sleep(695)
