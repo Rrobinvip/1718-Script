@@ -5,7 +5,7 @@ import pyautogui
 # Define the file path
 word_file_path = os.path.abspath("macOS_scripts/assets/Doc1.docx")
 
-for i in range(60):
+for i in range(14):
     print(" - (P3) Launching word.., for {} time".format(i+1))
     # Open the file in Word
     os.system("open -a 'Microsoft Word' '{}'".format(word_file_path))
