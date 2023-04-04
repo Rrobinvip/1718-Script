@@ -5,7 +5,7 @@ import pyautogui
 # Define the file path
 word_file_path = os.path.relpath("assets/Doc_win.docx")
 
-for i in range(60):
+for i in range(14):
     print(" - (P3) Launching word.., for {} time".format(i+1))
     # Open the file in Word
     os.system("start winword {}".format(word_file_path))

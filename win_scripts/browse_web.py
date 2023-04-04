@@ -32,9 +32,9 @@ for i in range(num_repetitions):
     time.sleep(5)
     
     for j in range(10):
-        driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+        # driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
         driver.refresh()
-        time.sleep(6)
+        time.sleep(5.5)
 
 print(" - (P1) All pages browsed! Quiting..")    
 driver.quit()
