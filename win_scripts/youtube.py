@@ -6,7 +6,10 @@ from Config import Config
 
 # Create a new instance of the Chrome driver
 options = webdriver.ChromeOptions() 
-options.add_argument("user-data-dir={}".format(Config.CHROME_DEFAULT_PATH))
+# options.add_argument("user-data-dir={}".format(Config.CHROME_DEFAULT_PATH))
+options.add_argument('--disable-gpu')  # disable hardware acceleration
+options.add_argument('--disable-accelerated-video-decode')
+options.add_argument('--disable-accelerated-mjpeg-decode')
 # Keeps the browser open
 options.add_experimental_option("detach", True)
 driver = webdriver.Chrome(options=options)
