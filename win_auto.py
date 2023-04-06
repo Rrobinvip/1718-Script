@@ -4,6 +4,7 @@ import subprocess
 
 print(" * Automated script started..")
 
+start_time = time.time()
 
 # get the path to your Python script relative to the current working directory
 script_path = os.path.join("win_scripts", "browse_web.py")
@@ -78,5 +79,8 @@ process.wait()
 # the parent process will resume here once the child process has finished
 print(" - Process 5 has finished.")
 
+end_time = time.time()
 
 print(" - All tasks finished without any error.")
+total_time = end_time - start_time
+print("Total time taken: ", total_time, " seconds")

@@ -17,6 +17,8 @@ options = webdriver.ChromeOptions()
 options.add_argument('--disable-gpu')  # disable hardware acceleration
 options.add_argument('--disable-accelerated-video-decode')
 options.add_argument('--disable-accelerated-mjpeg-decode')
+options.add_argument('--ignore-certificate-errors')
+options.add_argument('--ignore-ssl-errors')
 options.add_experimental_option("detach", True)
 driver = webdriver.Chrome(options=options)
     

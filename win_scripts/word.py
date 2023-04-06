@@ -3,7 +3,7 @@ import os, time
 import pyautogui
 
 # Define the file path
-word_file_path = os.path.relpath("assets/Doc_win.docx")
+word_file_path = os.path.relpath("win_scripts/assets/Doc_win.docx")
 
 for i in range(14):
     print(" - (P3) Launching word.., for {} time".format(i+1))
@@ -16,7 +16,7 @@ for i in range(14):
     print(" - (P3) Start typing..")
     # Type some text using the keyboard (The following runs for 50 seconds)
     for i in range(5):
-        pyautogui.typewrite('Hello, World 12345678', interval=0.5)
+        pyautogui.typewrite('11111, 11111 12345678', interval=0.5)
         pyautogui.press("enter")
         
     pyautogui.hotkey("ctrl", "a", interval=0.1)
